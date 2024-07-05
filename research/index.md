@@ -23,4 +23,4 @@ Text directly beneath the header.
 
 {% include search-info.html %}
 
-{% include list.html data="citations" component="citation" style="rich" %}
+{% include list.html data="sources" component="citation" style="rich" %}
