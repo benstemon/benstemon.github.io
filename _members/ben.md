@@ -1,6 +1,6 @@
 ---
 name: Ben Stone
-image: Ben-Sierras.png
+image: images/ben.jpg
 role: pi
 affiliation: University of South Carolina
 aliases:
