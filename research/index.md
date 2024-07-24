@@ -6,21 +6,15 @@ nav:
 ---
 
 # {% include icon.html icon="fa-solid fa-microscope" %}Research
+[//]: # (Text below here shows up directly beneath the RESEARCH header)
 
-Text directly beneath the header.
 
-{% include section.html %}
-
-## Highlighted
-
-{% include citation.html lookup="Open collaborative writing with Manubot" style="rich" %}
-
+[//]: # (Research section with search box and citations from sources.yaml)
 {% include section.html %}
 
 ## All
 
 {% include search-box.html %}
-
 {% include search-info.html %}
 
 {% include list.html data="sources" component="citation" style="rich" %}
