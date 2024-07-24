@@ -1,12 +1,12 @@
 ---
 name: Ben Stone
-image: images/ben.jpg
+portrait: images/ben.jpg
 role: pi
 affiliation: University of South Carolina
 aliases:
   - benstemon
 links:
-  inat: https://www.inaturalist.org/people/benstemon
+  inat: benstemon
   orcid: 0000-0002-7955-1264
 ---
 

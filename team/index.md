@@ -1,31 +1,16 @@
 ---
-title: Team
+title: People
 nav:
   order: 3
-  tooltip: About our team
+  tooltip: Lab Members
 ---
 
-# {% include icon.html icon="fa-solid fa-users" %}Team
+# {% include icon.html icon="fa-solid fa-users" %}Stone Lab members
 
-Text underneath Team.
 
 {% include section.html %}
+Ben Stone
 
 {% include list.html data="members" component="portrait" filters="role: pi" %}
 {% include list.html data="members" component="portrait" filters="role: ^(?!pi$)" %}
 
-{% include section.html background="images/background.jpg" dark=true %}
-
-Text in the black space at the bottom of the page.
-
-{% include section.html %}
-
-{% capture content %}
-
-{% include figure.html image="images/photo.jpg" %}
-{% include figure.html image="images/photo.jpg" %}
-{% include figure.html image="images/photo.jpg" %}
-
-{% endcapture %}
-
-{% include grid.html style="square" content=content %}

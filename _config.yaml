@@ -1,14 +1,14 @@
 # site properties and page defaults
-title: benstemonDESCRIPTION=An engaging 1-3 sentence description of your lab.
+title: The Stone Lab
 subtitle: 
 description: 
-header: images/background.jpg
-footer: images/background.jpg
+header: images/newberryi_closeup.png
+footer: images/newberryi_closeup.png
 proofer: false
 
 # site social media and other links
 links:
-  email: contact@benstemonDESCRIPTION=An engaging 1-3 sentence description of your lab..com
+  email: bs66@mailbox.sc.edu
   orcid: 0000-0002-7955-1264
   google-scholar: RPcw-fQAAAAJ
 
