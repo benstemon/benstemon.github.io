@@ -15,14 +15,14 @@ Rocky Mountains of Wyoming and Montana
     - conservation biology
 
 
-- id: doi:10.1007/s10592-019-01204-1
+- id: doi:10.21425/F5FBG45377
   type: paper
-  description: Conservation study of the narrowly endemic *Penstemon caryi* 
-  date: 2019-06-29
-  image: https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10592-019-01204-1/MediaObjects/10592_2019_1204_Fig1_HTML.png?as=webp
+  title: Does habitat stability structure intraspecific genetic diversity? It’s complicated...
+  date: 2020
+  image: https://www.jaminwieringa.com/uploads/8/7/7/8/87785926/phylogeo-pic_orig.png
   buttons:
     - type: source
       text: Manuscript Source
-      link: https://link.springer.com/article/10.1007/s10592-019-01204-1
+      link: https://escholarship.org/uc/item/4jg256x0
   tags:
-    - conservation biology
+    - phylogeography
