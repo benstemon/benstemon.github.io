@@ -1,8 +1,8 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
 - id: doi:10.1007/s10592-019-01204-1
-  title: "Genetic diversity and population structure in Cary\u2019s Beardtongue *Penstemon\
-    \ caryi* (Plantaginaceae), a rare plant endemic to the eastern Rocky Mountains\
+  title: "Genetic diversity and population structure in Cary\u2019s Beardtongue Penstemon\
+    \ caryi (Plantaginaceae), a rare plant endemic to the eastern Rocky Mountains\
     \ of Wyoming and Montana"
   authors:
   - Benjamin W. Stone
@@ -45,9 +45,10 @@
   - Lei Zuo
   - Bryan C. Carstens
   publisher: Frontiers of Biogeography
-  date: '1970-01-01'
+  date: '2020-04-01'
   link: https://doi.org/gh4h74
   type: paper
+  description: Comparative phylogeography of species in the southeastern United States
   image: https://www.jaminwieringa.com/uploads/8/7/7/8/87785926/phylogeo-pic_orig.png
   buttons:
   - type: source
@@ -55,5 +56,26 @@
     link: https://escholarship.org/uc/item/4jg256x0
   tags:
   - phylogeography
+  plugin: sources.py
+  file: sources.yaml
+- id: doi:10.3159/TORREY-D-19-00036.1
+  title: Little genetic distinction between varieties of Pinto Beardtongue (Penstemon
+    bicolor, Plantaginaceae), a rare plant native to the Mojave Desert
+  authors:
+  - Benjamin W. Stone
+  - Jonathan T. Hauck
+  - Andrea D. Wolfe
+  publisher: Journal of the Torrey Botanical Society
+  date: '2020-06-22'
+  link: https://doi.org/gt3mwh
+  type: paper
+  description: Population genetics of a rare species of *Penstemon*
+  image: https://www.researchgate.net/profile/Benjamin-Stone-7/publication/343475508/figure/fig1/AS:11431281078878314@1660327588106/Locations-of-populations-sampled-in-this-study-Variety-bicolor-populations-appear-in_W640.jpg
+  buttons:
+  - type: source
+    text: Manuscript Source
+    link: https://bioone.org/journals/the-journal-of-the-torrey-botanical-society/volume-147/issue-2/TORREY-D-19-00036.1/----Custom-HTML----Little/10.3159/TORREY-D-19-00036.1.short
+  tags:
+  - population genetics
   plugin: sources.py
   file: sources.yaml
