@@ -11,7 +11,7 @@
   link: https://doi.org/gt46bd
   type: paper
   description: Parallel loss of blue pigments in hummingbird-pollinated flowers
-  image: https://academic.oup.com/view-large/figure/437850252/msae007f2.tif
+  image: images/research_insets/mbe-2024.jpeg
   buttons:
   - type: source
     text: Manuscript Source
@@ -57,7 +57,7 @@
   link: https://doi.org/gj4p2k
   type: paper
   description: Phylogeography of the shrubby Penstemons
-  image: images/molec-2021.jpg
+  image: images/research_insets/molec-2021.jpg
   buttons:
   - type: source
     text: Manuscript Source
