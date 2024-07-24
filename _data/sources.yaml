@@ -1,11 +1,26 @@
 - id: doi:10.1007/s10592-019-01204-1
+  title: Genetic diversity and population structure in Cary’s Beardtongue
+*Penstemon caryi* (Plantaginaceae), a rare plant endemic to the eastern
+Rocky Mountains of Wyoming and Montana
+  publisher: Conservation Genetics
   type: paper
   description: Conservation study of the narrowly endemic *Penstemon caryi* 
   date: 2019-06-29
   image: https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10592-019-01204-1/MediaObjects/10592_2019_1204_Fig1_HTML.png?as=webp
   buttons:
-    - type: manubot
+    - type: source
+      text: Manuscript Source
       link: https://link.springer.com/article/10.1007/s10592-019-01204-1
+  tags:
+    - conservation biology
+
+
+- id: doi:10.1007/s10592-019-01204-1
+  type: paper
+  description: Conservation study of the narrowly endemic *Penstemon caryi* 
+  date: 2019-06-29
+  image: https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10592-019-01204-1/MediaObjects/10592_2019_1204_Fig1_HTML.png?as=webp
+  buttons:
     - type: source
       text: Manuscript Source
       link: https://link.springer.com/article/10.1007/s10592-019-01204-1
