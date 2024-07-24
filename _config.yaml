@@ -32,10 +32,6 @@ collections:
   members:
     output: true
 
-# Info for additional home tab
-nav:
-  - text: Home
-    url: https://benstemon.github.io/
 
 # jekyll plugins
 plugins:
