@@ -2,28 +2,28 @@
 title: Research
 nav:
   order: 1
-  tooltip: 
+  tooltip: See what we're studying
 ---
 
-# {% include icon.html icon="fa-solid fa-microscope" %}Publications
-[//]: # (Text below here shows up directly beneath the RESEARCH header)
+[//]: # (Top section. Spruce this up with Icons, images, etc.)
 
-This is what we do, generally
+Our lab uses genomic, phenotypic, and ecological data to answer questions about adaptation, speciation, convergent evolution, and more in the emerging model plant genus *Penstemon*.
 
 
+
+[//]: # (Hybrid Zones section)
 {% include section.html %}
 
 # Hybrid Zones
 
 {% capture content %}
-    {% include figure.html image="images/newberryi_closeup.jpg" width="100%" %}
+
+We study hybrid zones
+
+{% include figure.html image="images/newberryi_closeup.jpg" width="100%" %}
+
 {% endcapture %}
 
-{%
-  include grid.html
-  content=content
-  style="square"
-%}
 
 
 

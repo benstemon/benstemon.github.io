@@ -51,7 +51,7 @@ We are currently looking for graduate students to join the lab! Interested? Get 
 {%
   include feature.html
   image="images/ben.jpg"
-  link="team"
+  link="people"
   title="Our Team"
   text=text
 %}

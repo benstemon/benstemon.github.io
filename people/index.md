@@ -1,8 +1,8 @@
 ---
 title: People
 nav:
-  order: 3
-  tooltip: Lab Members
+  order: 2
+  tooltip: Lab members, past and present
 ---
 
 # {% include icon.html icon="fa-solid fa-users" %}Stone Lab members
