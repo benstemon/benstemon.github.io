@@ -41,6 +41,18 @@
   tags:
     - population genetics
 
-
+- id: doi:10.1111/mec.15992
+  title: Phylogeographic analysis of shrubby beardtongues reveals range expansions during the Last Glacial Maximum and implicates the Klamath Mountains as a hotspot for hybridization
+  publisher: Molecular Ecology
+  type: paper
+  description: Phylogeography of the shrubby Penstemons
+  date: 2021-05-20
+  image: images/molec-2021.jpg
+  buttons:
+    - type: source
+      text: Manuscript Source
+      link: https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.15992
+  tags:
+    - phylogeography; hybridization
 
 
