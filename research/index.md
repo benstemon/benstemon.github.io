@@ -2,19 +2,35 @@
 title: Research
 nav:
   order: 1
-  tooltip: Published works
+  tooltip: 
 ---
 
-# {% include icon.html icon="fa-solid fa-microscope" %}Research
+# {% include icon.html icon="fa-solid fa-microscope" %}Publications
 [//]: # (Text below here shows up directly beneath the RESEARCH header)
 
+This is what we do, generally
 
-[//]: # (Research section with search box and citations from sources.yaml)
+
 {% include section.html %}
 
-## All
+# Hybrid Zones
 
-{% include search-box.html %}
-{% include search-info.html %}
+{% capture content %}
+    {% include figure.html image="images/newberryi_closeup.jpg" width="100%" %}
+{% endcapture %}
 
-{% include list.html data="sources" component="citation" style="rich" %}
+{%
+  include grid.html
+  content=content
+  style="square"
+%}
+
+
+
+
+
+
+{% include section.html %}
+
+# Phylogeography
+

@@ -4,7 +4,7 @@
 # The Stone Lab
 
 
-
+[//]: # (Research page)
 {% include section.html %}
 
 {% capture text %}
@@ -14,7 +14,7 @@ Our lab uses genomic, phenotypic, and ecological data to answer questions about 
 {%
   include button.html
   link="research"
-  text="See our publications"
+  text="Find out more"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -31,7 +31,7 @@ Our lab uses genomic, phenotypic, and ecological data to answer questions about 
 %}
 
 
-
+[//]: # (People page)
 {% capture text %}
 
 We are currently looking for graduate students to join the lab! Interested? Get in touch!
@@ -55,3 +55,4 @@ We are currently looking for graduate students to join the lab! Interested? Get 
   title="Our Team"
   text=text
 %}
+
