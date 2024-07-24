@@ -1,10 +1,9 @@
 ---
 name: Ben Stone
 portrait: images/ben.jpg
-role: pi
 affiliation: University of South Carolina
 aliases:
-  - benstemon
+  - BW Stone
 links:
   inat: benstemon
   orcid: 0000-0002-7955-1264

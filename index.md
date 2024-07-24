@@ -1,13 +1,11 @@
 ---
 ---
 
-# benstemonDESCRIPTION=An engaging 1-3 sentence description of your lab.'s Website
+# The Stone Lab
 
 
 
 {% include section.html %}
-
-## Highlights
 
 {% capture text %}
 
@@ -52,7 +50,7 @@ We are currently looking for graduate students to join the lab! Interested? Get 
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/ben.jpg"
   link="team"
   title="Our Team"
   text=text

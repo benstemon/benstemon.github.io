@@ -1,5 +1,5 @@
 
-# benstemonDESCRIPTION=An engaging 1-3 sentence description of your lab.'s Website
+# The Stone Lab
 
 Visit **[benstemon.github.io](https://benstemon.github.io)** 🚀
 
