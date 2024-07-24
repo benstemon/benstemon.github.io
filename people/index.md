@@ -11,5 +11,5 @@ nav:
 {% include section.html %}
 Ben Stone
 
-{% include list.html data="members" component="portrait"}
+{% include list.html data="members" component="portrait" %}
 
