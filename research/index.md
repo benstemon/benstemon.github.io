@@ -13,15 +13,14 @@ We aim to understand the evolutionary origins and genetic architecture of phenot
 
 
 [//]: # (Adaptive radiation section)
+
 {% include section.html %}
-
-
 
 # Genomics in a rapid continental adaptive radiation
 
-<div class="research-content">
+*Penstemon* serves as an exceptional emerging model system to explore key evolutionary questions through diverse approaches including phylogenomics, population genomics, and comparative approaches.
 
-  <p>*Penstemon* serves as an exceptional emerging model system to explore key evolutionary questions through diverse approaches including phylogenomics, population genomics, and comparative approaches.</p>
+<div class="research-content">
 
   {% include figure.html image="images/penstemon-floral-diversity.jpg" caption="The incredible floral diversity in *Penstemon*. Photography by Dr. Andi Wolfe." width="400px" class="figure-left" %}
 
