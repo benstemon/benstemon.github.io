@@ -41,4 +41,10 @@
   --transition: 0.2s ease;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /*# sourceMappingURL=-theme.css.map */
