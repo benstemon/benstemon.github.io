@@ -26,9 +26,9 @@ We aim to understand the evolutionary origins and genetic architecture of phenot
   image="images/penstemon-floral-diversity.jpg"
   caption="The incredible floral diversity in *Penstemon*. Photography by Dr. Andi Wolfe."
   width="400px"
+  class="figure-left"
 %}
 
-{% include section.html %}
 
 *Penstemon* is the largest angiosperm genus endemic to North America and exhibits an incredible array of phenotypic and ecological diversity across its nearly 300 described species. Floral diversity is considered a key axis of adaptive variation; repeated evolutionary transitions are common in *Penstemon*, with an estimated 20+ independent transitions from bee pollination to hummingbird pollination. There are also many examples of adaptation to specific substrates and habitats such as sand dunes, limestone, and talus/shale/scree.
 
