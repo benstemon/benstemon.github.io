@@ -58,8 +58,8 @@ Many *Penstemon* species are of conservation concern for state and federal agenc
 
 <div class="research-content">
 
-  {% include figure.html image=https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10592-019-01204-1/MediaObjects/10592_2019_1204_Fig1_HTML.png?as=webp caption="Sampling distribution of the narrowly endemic *Penstemon caryi*." width="400px" class="figure-left" %}
+  {% include figure.html image="https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10592-019-01204-1/MediaObjects/10592_2019_1204_Fig1_HTML.png?as=webp" caption="Sampling distribution of the narrowly endemic *Penstemon caryi*." width="400px" class="figure-left" %}
 
-  {% include figure.html image=https://wolfelab.asc.ohio-state.edu/sites/wolfelab.asc.ohio-state.edu/files/penstemon/images/2.caryi_.20160626-5D_33057-%C2%A92015_Andi_Wolfe_-_all_rights_reserved.jpg caption="*Penstemon caryi*. Photography by Dr. Andi Wolfe." width="400px" class="figure-right" %}
+  {% include figure.html image="https://wolfelab.asc.ohio-state.edu/sites/wolfelab.asc.ohio-state.edu/files/penstemon/images/2.caryi_.20160626-5D_33057-%C2%A92015_Andi_Wolfe_-_all_rights_reserved.jpg" caption="*Penstemon caryi*. Photography by Dr. Andi Wolfe." width="400px" class="figure-right" %}
 
 
