@@ -7,6 +7,11 @@
   margin: 40px 0;
 }
 
+.figure-left {
+  float: left;
+  margin: 0 20px 20px 0;
+}
+
 .figure-image {
   display: contents;
 }
