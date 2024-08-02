@@ -36,3 +36,9 @@ $wrap: 600px;
     max-width: unset;
   }
 }
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

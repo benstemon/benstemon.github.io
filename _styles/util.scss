@@ -12,3 +12,9 @@
 .right {
   text-align: right;
 }
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
