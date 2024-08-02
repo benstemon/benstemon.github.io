@@ -7,12 +7,6 @@
   margin: 40px 0;
 }
 
-figure .figure-left {
-  float: left;
-  margin: 0 20px 20px 0;
-  width: 400px;
-}
-
 .figure-image {
   display: contents;
 }
