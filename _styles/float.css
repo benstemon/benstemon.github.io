@@ -31,5 +31,10 @@
     max-width: unset;
   }
 }
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
 
 /*# sourceMappingURL=float.css.map */

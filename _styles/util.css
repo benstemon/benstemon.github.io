@@ -10,4 +10,10 @@
   text-align: right;
 }
 
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
 /*# sourceMappingURL=util.css.map */
