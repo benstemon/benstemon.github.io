@@ -14,6 +14,7 @@
     - phylogenomics
     - parallel evolution
 
+
 - id: doi:10.1002/ajb2.16118
   title: Testing hypotheses of hybrid taxon formation in the shrubby beardtongues (Penstemon subgenus Dasanthera)
   publisher: American Journal of Botany
@@ -29,6 +30,7 @@
     - hybridization
     - phylogenetics
     - RAD-seq
+
 
 - id: doi:10.1111/mec.15992
   title: Phylogeographic analysis of shrubby beardtongues reveals range expansions during the Last Glacial Maximum and implicates the Klamath Mountains as a hotspot for hybridization
@@ -46,6 +48,7 @@
     - hybridization
     - RAD-seq
 
+
 - id: doi:10.3159/TORREY-D-19-00036.1
   title: Little genetic distinction between varieties of Pinto Beardtongue (Penstemon bicolor, Plantaginaceae), a rare plant native to the Mojave Desert
   publisher: Journal of the Torrey Botanical Society
@@ -61,6 +64,7 @@
     - population genetics
     - SSRs
 
+
 - id: doi:10.21425/F5FBG45377
   title: Does habitat stability structure intraspecific genetic diversity? It’s complicated...
   publisher: Frontiers of Biogeography
@@ -74,6 +78,7 @@
       link: https://escholarship.org/uc/item/4jg256x0
   tags:
     - phylogeography
+
 
 - id: doi:10.1007/s10592-019-01204-1
   title: Genetic diversity and population structure in Cary’s Beardtongue Penstemon caryi (Plantaginaceae), a rare plant endemic to the eastern Rocky Mountains of Wyoming and Montana
