@@ -20,15 +20,15 @@ We aim to understand the evolutionary origins and genetic architecture of phenot
 
 *Penstemon* serves as an exceptional emerging model system to explore key evolutionary questions through diverse approaches including phylogenomics, population genomics, and comparative approaches.
 
-
 {%
   include figure.html
   image="images/penstemon-floral-diversity.jpg"
   caption="The incredible floral diversity in *Penstemon*. Photography by Dr. Andi Wolfe."
   width="400px"
   class="figure-left"
+  style="float: left; margin: 0 20px 20px 0;"
 %}
-
+<div style="clear: both;"></div>
 <div class="clearfix"></div>  
 
 
@@ -42,13 +42,8 @@ We aim to understand the evolutionary origins and genetic architecture of phenot
 
 # Hybrid Zones: natural laboratories
 
-{% capture content %}
+The recency of the *Penstemon* radiation has resulted in many incomplete barriers to reproduction, and hybrid zones between closely related species form frequently. We leverage these naturally phenotypically and genetically mixed populations to identify genomic regions underlying floral traits associated with pollination syndrome.
 
-We study hybrid zones
-
-{% include figure.html image="images/newberryi_closeup.jpg" width="100%" %}
-
-{% endcapture %}
 
 
 
