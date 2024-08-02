@@ -24,7 +24,7 @@ Our lab uses genomic, phenotypic, and ecological data to answer questions about 
 
 {%
   include feature.html
-  image="images/newberryi_closeup.jpg"
+  image="images/laevis-bee.jpg"
   link="research"
   title="Our Research"
   text=text
