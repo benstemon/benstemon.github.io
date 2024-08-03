@@ -6,10 +6,15 @@ nav:
 
 # {% include icon.html icon="fa-regular fa-envelope" %}Contact
 
-{%
-  include button.html
-  type="email"
-  text="bs66@mailbox.sc.edu"
-  link="bs66@mailbox.sc.edu"
-%}
+<div class="research-content">
 
+  {% include figure.html image="images/ben.jpg" width="400px" class="figure-left" %}
+
+  <p>
+  bs66@mailbox.sc.edu
+  Department of Biological Sciences
+  700 Sumter St, Coker Hall
+  Columbia, SC 29208
+  </p
+
+</div>
