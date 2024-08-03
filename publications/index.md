@@ -11,10 +11,5 @@ nav:
 [//]: # (Research section with search box and citations from sources.yaml)
 {% include section.html %}
 
-## Peer-Reviewed Publications
-
 {% include list.html data="sources" component="citation" style="rich" %}
 
-
-{% include section.html %}
-## Preprints
