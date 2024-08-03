@@ -3,12 +3,12 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 526 210" style="enable-background:new 0 0 526 210;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#74AC00;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
-	.st1{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st0{fill:#74AC00;}
+	.st1{fill:#FFFFFF;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
 </style>
-<g>
+<g id="iNaturalist-Wordmark">
 	<path id="i" class="st0" d="M22.6,92.6V151H6.9V93.9L22.6,92.6z M18.5,59.2c5.2-1.5,11.4-1.2,12-0.7l-0.1,0.1
-		c-1.4,1.2-4.7,3.1-4.8,12.5v0.3c0,5.7-2.9,9.4-6.2,11.4S6.9,85.7,4.3,84.5c1.6-1.4,2.3-6.2,2.6-9.5L7,73.7v-0.4
+		c-1.4,1.2-4.7,3.1-4.8,12.5v0.3c0,5.7-2.9,9.4-6.2,11.4c-3.3,2-12.5,2.9-15.1,1.7c1.6-1.4,2.3-6.2,2.6-9.5L7,73.7v-0.4
 		C7.6,68.6,9.4,61.8,18.5,59.2z"/>
 	<path id="Combined-Shape" class="st1" d="M395.4,63v88H381V64.3L395.4,63z M314.9,92.8l-0.9,12.6c-2.5-0.6-4.3-0.8-6.3-0.8
 		c-4.1,0-8.3,1.5-11.9,6.7V151h-14.3V93.5l13.3-1.6v6.2c3.3-6.2,10.5-6.2,14-6.2C310.4,91.9,312.9,92.1,314.9,92.8z M270,91.4v57.8

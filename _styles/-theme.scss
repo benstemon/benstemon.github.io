@@ -58,18 +58,3 @@
     clear: both;
     display: table;
 }
-
-/* In your -theme.scss or another relevant CSS file */
-
-a[href*="inaturalist.org"] svg {  /* Target the iNaturalist icon */
-  fill: white; 
-}
-
-a[href*="inaturalist.org"] svg:hover { 
-  fill: blue; 
-}
-
-.logo .logo-svg {  /* Target the logo SVG */
-  fill: currentColor; 
-}
-
