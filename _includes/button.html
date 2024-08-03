@@ -15,7 +15,15 @@
       {% endif %}
       aria-label="{{ button.tooltip | default: button.icon | default: "button" }}"
     >
-      {% include icon.html icon=button.icon %}
+      {% if button.icon contains ".svg" %} 
+        {% capture inline %}
+          {% include {{ button.icon }} %} 
+        {% endcapture %}
+        <span class="icon {{ include.svg_class }}"> {{- inline | strip_newlines -}} </span>
+      {% elsif button.icon and button.icon != "" %}
+        <i class="icon {{ button.icon }}"></i>
+      {% endif %}
+
       {% if button.text and button.text != "" %}
         <span>{{ button.text }}</span>
       {% endif %}

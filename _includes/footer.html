@@ -19,7 +19,11 @@
     {% for link in site.links %}
       {% assign key = link[0] %}
       {% assign value = link[1] %}
-      {% include button.html type=key text="" link=value style="bare" %}
+      {% if key == 'inat' %}
+        {% include button.html type=key text="" link=value style="bare" svg_class="social-icon inaturalist" %}
+      {% else %}
+        {% include button.html type=key text="" link=value style="bare" %}
+      {% endif %}
     {% endfor %}
   </div>
 
