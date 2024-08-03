@@ -85,7 +85,7 @@ google-scholar:
   link: https://scholar.google.com/citations?user=$VALUE
 
 inat:
-  icon: inat-logo.svg
+  icon: ai ai-inaturalist
   text: iNaturalist
   tooltip: iNaturalist
   link: https://www.inaturalist.org/people/$VALUE

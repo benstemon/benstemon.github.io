@@ -15,3 +15,15 @@
 <noscript>
   <link href="{{ fontawesome }}" rel="stylesheet">
 </noscript>
+
+<!-- Font Awesome icons (load asynchronously due to size) -->
+{% assign academicons = "https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" %}
+<link
+  href="{{ academicons }}"
+  rel="stylesheet"
+  media="none"
+  onload="this.removeAttribute('media'); this.onload = null;"
+/>
+<noscript>
+  <link href="{{ academicons }}" rel="stylesheet">
+</noscript>
