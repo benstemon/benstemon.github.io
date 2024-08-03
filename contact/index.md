@@ -22,6 +22,8 @@ nav:
   bs66@mailbox.sc.edu
   <br>
   <br>
+  University of South Carolina
+  <br>
   Department of Biological Sciences
   <br>
   700 Sumter St, Coker Hall
