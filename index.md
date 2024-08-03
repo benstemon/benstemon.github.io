@@ -1,9 +1,15 @@
+---
+---
+
+# The Stone Lab
+
+
 [//]: # (Research page)
 {% include section.html %}
 
 {% capture text %}
 
-We use genomic, phenotypic, and ecological data to answer questions about adaptation, speciation, convergent evolution, and more in the emerging model plant genus *Penstemon*.
+Our lab uses genomic, phenotypic, and ecological data to answer questions about adaptation, speciation, convergent evolution, and more in the emerging model plant genus *Penstemon*.
 
 {%
   include button.html
@@ -20,7 +26,7 @@ We use genomic, phenotypic, and ecological data to answer questions about adapta
   include feature.html
   image="images/laevis-bee.jpg"
   link="research"
-  title="Research"
+  title="Our Research"
   text=text
 %}
 
@@ -44,9 +50,9 @@ We are currently looking for graduate students to join the lab! Interested? Get 
 
 {%
   include feature.html
-  image="images/people/ben.jpg"
+  image="images/ben.jpg"
   link="people"
-  title="People"
+  title="Our Team"
   text=text
 %}
 

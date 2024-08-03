@@ -2,6 +2,7 @@
 title: Contact
 nav:
   order: 5
+  tooltip: Get in touch
 ---
 
 # {% include icon.html icon="fa-regular fa-envelope" %}Contact

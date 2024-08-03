@@ -2,6 +2,9 @@
 title: Research
 nav:
   order: 1
+  tooltip: See what we're studying
+header: images/pseudomasaris.jpg
+footer: images/newberryi_closeup.jpg
 ---
 
 [//]: # (Top section. Spruce this up with Icons, images, etc.)

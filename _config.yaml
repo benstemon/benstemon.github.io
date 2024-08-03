@@ -1,5 +1,5 @@
 # site properties and page defaults
-title: The Penstemon Lab at Mississippi State
+title: The Stone Lab
 subtitle: 
 description: 
 header: images/pseudomasaris.jpg
@@ -11,7 +11,6 @@ links:
   email: bs66@mailbox.sc.edu
   orcid: 0000-0002-7955-1264
   google-scholar: RPcw-fQAAAAJ
-  inat: benstemon
 
 ### jekyll settings
 
@@ -31,7 +30,7 @@ defaults:
 collections:
   # generate page for each member
   members:
-    output: false
+    output: true
 
 
 # jekyll plugins
