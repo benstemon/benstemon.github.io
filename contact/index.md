@@ -14,9 +14,16 @@ nav:
   {% include figure.html image="images/people/ben.jpg" width="350px" class="figure-left" %}
 
   <p>
+  <br>
+  <br>
+  <br>
+  <br>
   bs66@mailbox.sc.edu
+  <br>
   Department of Biological Sciences
+  <br>
   700 Sumter St, Coker Hall
+  <br>
   Columbia, SC 29208
   </p>
 
