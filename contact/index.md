@@ -6,6 +6,8 @@ nav:
 
 # {% include icon.html icon="fa-regular fa-envelope" %}Contact
 
+{% include section.html %}
+
 <div class="research-content">
 
   {% include figure.html image="images/ben.jpg" width="400px" class="figure-left" %}
