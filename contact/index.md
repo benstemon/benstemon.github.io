@@ -18,7 +18,9 @@ nav:
   <br>
   <br>
   <br>
+  <br>
   bs66@mailbox.sc.edu
+  <br>
   <br>
   Department of Biological Sciences
   <br>

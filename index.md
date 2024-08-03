@@ -2,6 +2,11 @@
 ---
 
 [//]: # (Research page)
+
+## The lab will be starting at Mississippi State University Autumn 2025!
+<br>
+**We are recruiting lab members to start as early as August 2025. Positions are available for graduate students and a lab tech, and I would love to work together on fellowship applications for those seeking postdoctoral opportunities.**
+
 {% include section.html %}
 
 {% capture text %}
@@ -31,7 +36,9 @@ We use genomic, phenotypic, and ecological data to answer questions about adapta
 [//]: # (People page)
 {% capture text %}
 
-We are currently looking for graduate students to join the lab! Interested? Get in touch!
+**We are currently looking for graduate students and a lab tech to join the lab!**
+<br>
+**Interested? Get in touch!**
 
 
 {%
