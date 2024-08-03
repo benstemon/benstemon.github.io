@@ -2,7 +2,6 @@
 title: Publications
 nav:
   order: 3
-  tooltip: Peer-reivewed and otherwise
 ---
 
 # {% include icon.html icon="fa-solid fa-microscope" %}Publications
