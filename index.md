@@ -1,4 +1,4 @@
---
+---
 
 [//]: # (Research page)
 {% include section.html %}
