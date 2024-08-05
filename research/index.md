@@ -17,17 +17,20 @@ We aim to understand the evolutionary origins and genetic architecture of phenot
 
 *Penstemon* serves as an exceptional emerging model system to explore key evolutionary questions through diverse approaches including phylogenomics, population genomics, and comparative approaches.
 
-<div class="research-content">
+{% capture col1 %}
+{% include figure.html image="images/penstemon-floral-diversity.jpg" caption="Some of the incredible floral diversity in *Penstemon*. Photography by Dr. Andi Wolfe." width="400px" %}
+{% endcapture %}
 
-  {% include figure.html image="images/penstemon-floral-diversity.jpg" caption="Some of the incredible floral diversity in *Penstemon*. Photography by Dr. Andi Wolfe." width="400px" class="figure-left" %}
 
-  <p>
-  <br>
-  <br>
-  <i>Penstemon</i> is the largest angiosperm genus endemic to North America and exhibits an incredible array of phenotypic and ecological diversity across its nearly 300 described species. Floral diversity is considered a key axis of adaptive variation. In particular, repeated evolutionary transitions are common, with an estimated >20 independent transitions from bee pollination to hummingbird pollination. Many species have also apparently adapted to specific substrates and habitats, such as sand dunes, limestone, and talus/shale/scree.</p>
+{% capture col2 %}
+*Penstemon* is the largest angiosperm genus endemic to North America and exhibits an incredible array of phenotypic and ecological diversity across its nearly 300 described species. Floral diversity is considered a key axis of adaptive variation. In particular, repeated evolutionary transitions are common, with an estimated >20 independent transitions from bee pollination to hummingbird pollination. Many species have also apparently adapted to specific substrates and habitats, such as sand dunes, limestone, and talus/shale/scree.
+{% endcapture %}
 
-</div>
-
+{%
+  include cols.html
+  col1=col1
+  col2=col2
+%}
 
 
 [//]: # (Hybrid Zones section)

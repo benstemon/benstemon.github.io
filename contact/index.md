@@ -19,7 +19,7 @@ nav:
   <br>
   <br>
   <br>
-  bs66@mailbox.sc.edu
+  <b>bs66@mailbox.sc.edu</b>
   <br>
   <br>
   University of South Carolina

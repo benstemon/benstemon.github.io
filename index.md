@@ -5,7 +5,7 @@
 
 ## The lab will be starting at Mississippi State University Autumn 2025!
 <br>
-**We are recruiting lab members to start as early as August 2025. Positions are available for graduate students and a lab tech, and I would love to work together on fellowship applications for those seeking postdoctoral opportunities.**
+**We are recruiting lab members to start as early as August 2025. Positions are available for graduate students and a lab tech. If you are a postdoc interested in collaborating on fellowship applications, I encourage you to contact me!**
 
 {% include section.html %}
 
