@@ -3,15 +3,15 @@
 
 [//]: # (Research page)
 
-## The lab will be starting at Mississippi State University Autumn 2025!
+## Recruiting Graduate Students!
 <br>
-**We are recruiting lab members to start as early as August 2025. Positions are available for graduate students and a lab tech. If you are a postdoc interested in collaborating on fellowship applications, I encourage you to contact me!**
+**I am recruiting MS and PhD students for August 2026. If you are a postdoc interested in collaborating on fellowship applications, I encourage you to get in touch!**
 
 {% include section.html %}
 
 {% capture text %}
 
-We use genomic, phenotypic, and ecological data to answer questions about adaptation, speciation, convergent evolution, and more in the emerging model plant genus *Penstemon*.
+We use genomic, phenotypic, and ecological data to answer questions about adaptation, speciation, convergent evolution, and more, mainly in the emerging model plant genus *Penstemon*.
 
 {%
   include button.html
@@ -36,7 +36,7 @@ We use genomic, phenotypic, and ecological data to answer questions about adapta
 [//]: # (People page)
 {% capture text %}
 
-**We are currently looking for graduate students and a lab tech to join the lab!**
+**Currently recruiting MS and PhD students.**
 <br>
 **Interested? Get in touch!**
 
