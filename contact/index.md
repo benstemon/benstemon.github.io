@@ -19,16 +19,12 @@ nav:
   <br>
   <br>
   <br>
-  <b>bs66@mailbox.sc.edu</b>
+  <b>bws214 [at] msstate.edu</b>
   <br>
   <br>
-  University of South Carolina
+  Mississippi State University
   <br>
   Department of Biological Sciences
-  <br>
-  700 Sumter St, Coker Hall
-  <br>
-  Columbia, SC 29208
   </p>
 
 </div>
