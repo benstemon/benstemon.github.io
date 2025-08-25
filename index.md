@@ -63,8 +63,4 @@ We use genomic, phenotypic, and ecological data to answer questions about adapta
 <!-- ---------- NEW: iNaturalist widget at the bottom ---------- -->
 ## Recent iNaturalist Observations
 
-<div id="inat-widget">
-  <script type="text/javascript"
-          src="https://www.inaturalist.org/observations/widget?username=benstemon&limit=5">
-  </script>
-</div>
+{% include inat.html %}
