@@ -677,7 +677,7 @@
     
 <p><strong>Currently recruiting MS and PhD students.</strong>
 <br>
-<strong>Interested? Get in touch!</strong></p>
+Interested? Get in touch!</p>
 
 <div class="button-wrapper">
     <a class="button" href="/team" data-style="bare" data-flip="" aria-label="fa-solid fa-arrow-right">
@@ -789,5 +789,16 @@
   <input type="checkbox" class="dark-toggle" data-tooltip="Dark mode" aria-label="toggle dark mode" oninput="onDarkToggleChange(event)">
 </footer>
 
+    
+    <section>
+      <h2>Recent iNaturalist Observations</h2>
+      <div id="inat-widget"></div>
+      
+      <!-- iNaturalist widget script -->
+      <script src="https://www.inaturalist.org/observations/widget.js?user=benstemon&num=5&order_by=observed_on&order=desc"></script>
+      <noscript>
+        <p><a href="https://www.inaturalist.org/observations?user_id=benstemon">View observations on iNaturalist</a></p>
+      </noscript>
+    </section>
   </body>
 </html>
