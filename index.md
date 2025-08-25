@@ -38,7 +38,7 @@ We use genomic, phenotypic, and ecological data to answer questions about adapta
 
 **Currently recruiting MS and PhD students.**
 <br>
-**Interested? Get in touch!**
+Interested? Get in touch!
 
 
 {%
