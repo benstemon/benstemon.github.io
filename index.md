@@ -63,6 +63,8 @@ Interested? Get in touch!
 
 [//]: # (iNat Widget)
 
+## Recent iNaturalist Observations
+<div class="inat-container">
 {% raw %}
 <style type="text/css" media="screen">
 .inat-widget { font-family: Georgia, serif; padding: 10px; line-height: 1;}
@@ -100,3 +102,6 @@ Interested? Get in touch!
   </table>
 </div>
 {% endraw %}
+</div>
+
+<div style="clear: both;"></div>
