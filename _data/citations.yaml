@@ -1,8 +1,8 @@
 # DO NOT EDIT, GENERATED AUTOMATICALLY
 
 - id: doi:10.1093/molbev/msae007
-  title: Ecological diversification in an adaptive radiation of plants':' the role
-    of de novo mutation and introgression
+  title: 'Ecological diversification in an adaptive radiation of plants: the role
+    of de novo mutation and introgression'
   authors:
   - Benjamin W Stone
   - Carolyn A Wessinger
@@ -14,7 +14,7 @@
   image: images/research_insets/mbe-2024.jpeg
   buttons:
   - type: source
-    text: Manuscript Source
+    text: Link to manuscript
     link: https://academic.oup.com/mbe/article/41/1/msae007/7564791
   tags:
   - pollination syndrome
@@ -37,7 +37,7 @@
   image: images/research_insets/ajb-2023.jpg
   buttons:
   - type: source
-    text: Manuscript Source
+    text: Link to manuscript
     link: https://bsapubs.onlinelibrary.wiley.com/doi/full/10.1002/ajb2.16118
   tags:
   - hybridization
@@ -60,7 +60,7 @@
   image: images/research_insets/molec-2021.jpg
   buttons:
   - type: source
-    text: Manuscript Source
+    text: Link to manuscript
     link: https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.15992
   tags:
   - phylogeography
@@ -83,7 +83,7 @@
   image: https://www.researchgate.net/profile/Benjamin-Stone-7/publication/343475508/figure/fig1/AS:11431281078878314@1660327588106/Locations-of-populations-sampled-in-this-study-Variety-bicolor-populations-appear-in_W640.jpg
   buttons:
   - type: source
-    text: Manuscript Source
+    text: Link to manuscript
     link: https://bioone.org/journals/the-journal-of-the-torrey-botanical-society/volume-147/issue-2/TORREY-D-19-00036.1/----Custom-HTML----Little/10.3159/TORREY-D-19-00036.1.short
   tags:
   - population genetics
@@ -118,7 +118,7 @@
   image: https://www.jaminwieringa.com/uploads/8/7/7/8/87785926/phylogeo-pic_orig.png
   buttons:
   - type: source
-    text: Manuscript Source
+    text: Link to manuscript
     link: https://escholarship.org/uc/item/4jg256x0
   tags:
   - phylogeography
@@ -142,7 +142,7 @@
   image: https://media.springernature.com/full/springer-static/image/art%3A10.1007%2Fs10592-019-01204-1/MediaObjects/10592_2019_1204_Fig1_HTML.png?as=webp
   buttons:
   - type: source
-    text: Manuscript Source
+    text: Link to manuscript
     link: https://link.springer.com/article/10.1007/s10592-019-01204-1
   tags:
   - conservation biology
