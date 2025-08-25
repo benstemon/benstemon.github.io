@@ -4,4 +4,20 @@ main {
   flex-grow: 1;
 }
 
+/* --- Custom iNat widget styles --- */
+.inat-container {
+  float: right; /* moves widget to the right */
+  margin-left: 24px; /* breathing room from photos/text */
+  margin-bottom: 20px; /* spacing below */
+  max-width: 360px; /* keeps it narrow */
+}
+
+@media (max-width: 768px) {
+  .inat-container {
+    float: none; /* on mobile, stack instead of float */
+    margin: 16px 0;
+    max-width: 100%;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
