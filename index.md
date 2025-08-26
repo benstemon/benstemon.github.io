@@ -63,33 +63,39 @@ Interested? Get in touch!
 
 [//]: # (iNat Widget)
 
-## Recent iNaturalist Observations
 
-<div class="inat-container">
-{% raw %}
-<div class="inat-widget">
-  <script
-    type="text/javascript"
-    charset="utf-8"
-    src="https://www.inaturalist.org/observations/benstemon.widget?layout=large&limit=5&order=desc&order_by=observed_on">
-  </script>
+<div class="inat-flag-container">
+  <div class="inat-widget">
+    {% raw %}
+    <script
+      type="text/javascript"
+      charset="utf-8"
+      src="https://www.inaturalist.org/observations/benstemon.widget?layout=large&limit=5&order=desc&order_by=observed_on">
+    </script>
 
-  <table class="inat-footer">
-    <tr class="inat-user">
-      <td class="inat-user-image">
-        <a href="https://www.inaturalist.org/observations/benstemon">
-          <img class="usericon" src="https://static.inaturalist.org/attachments/users/icons/924957/thumb.jpg?1662995748" />
-        </a>
-      </td>
-      <td class="inat-value">
-        <strong>
-          <a href="https://www.inaturalist.org/observations/benstemon">View benstemon’s observations »</a>
-        </strong>
-      </td>
-    </tr>
-  </table>
-</div>
-{% endraw %}
+    <table class="inat-footer">
+      <tr class="inat-user">
+        <td class="inat-user-image">
+          <a href="https://www.inaturalist.org/observations/benstemon">
+            <img class="usericon" src="https://static.inaturalist.org/attachments/users/icons/924957/thumb.jpg?1662995748" />
+          </a>
+        </td>
+        <td class="inat-value">
+          <strong>
+            <a href="https://www.inaturalist.org/observations/benstemon">View benstemon’s observations »</a>
+          </strong>
+        </td>
+      </tr>
+    </table>
+    {% endraw %}
+  </div>
+
+  <div class="flagcounter">
+    <a href="https://info.flagcounter.com/Cr5i">
+      <img src="https://s01.flagcounter.com/countxl/Cr5i/bg_FFA3F3/txt_000000/border_7C21CC/columns_3/maxflags_15/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" alt="Flag Counter" />
+    </a>
+  </div>
 </div>
 
 <div style="clear: both;"></div>
+
