@@ -1,22 +1,35 @@
-/* --- Container holding iNaturalist + FlagCounter --- */
+/* --- Row container: FlagCounter (left) + iNat (right) --- */
 .inat-flag-container {
   display: flex;
-  flex-direction: row;       /* side by side */
-  align-items: flex-start;   /* align tops */
-  gap: 24px;                 /* space between flag counter and iNat */
-  margin-bottom: 20px;
+  flex-direction: row;      /* side by side */
+  align-items: flex-start;  /* align tops */
+  gap: 24px;                /* space between them */
+  margin: 20px 0;
 }
 
-/* Mobile: stack them vertically */
+/* Mobile: stack vertically */
 @media (max-width: 768px) {
   .inat-flag-container {
     flex-direction: column;
     align-items: flex-start;
     margin: 16px 0;
+    gap: 16px;
   }
 }
 
-/* --- iNaturalist widget placement --- */
+/* --- FlagCounter block --- */
+.flagcounter {
+  flex: 0 0 200px;          /* fixed-ish narrow column on the left */
+  max-width: 220px;
+}
+.flagcounter img {
+  max-width: 100%;
+  height: auto;
+  border: none;
+  display: block;
+}
+
+/* --- iNaturalist widget block --- */
 .inat-widget,
 .inat-widget a,
 .inat-label,
@@ -25,7 +38,7 @@
   font-family: inherit !important;
 }
 
-/* Hide the iNaturalist header/logo block */
+/* Hide the iNaturalist header/logo block (if injected) */
 .inat-widget-header {
   display: none !important;
 }
@@ -54,16 +67,4 @@
 .inat-widget td {
   vertical-align: top;
   padding: 6px 0 !important;
-}
-
-/* --- FlagCounter styling --- */
-.flagcounter {
-  flex: 0 0 auto;        /* don’t let it stretch or shrink */
-  max-width: 200px;      /* keeps flag counter narrow */
-}
-
-.flagcounter img {
-  max-width: 100%;
-  height: auto;
-  border: none;
 }
