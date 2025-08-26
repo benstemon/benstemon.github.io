@@ -61,17 +61,17 @@ Interested? Get in touch!
 %}
 
 
-[//]: # (iNat Widget)
+[//]: # (iNat + Flag widgets)
 
-<div class="widget-row">
-  <div class="flag-container">
+<div class="inat-flag-container">
+  <div class="flagcounter">
     <a href="https://info.flagcounter.com/Cr5i">
-      <img src="https://s01.flagcounter.com/countxl/Cr5i/bg_FFA3F3/txt_000000/border_7C21CC/columns_3/maxflags_15/viewers_0/labels_1/pageviews_0/flags_0/percent_0/" 
-           alt="Flag Counter" border="0">
+      <img src="https://s01.flagcounter.com/countxl/Cr5i/bg_FFA3F3/txt_000000/border_7C21CC/columns_3/maxflags_15/viewers_0/labels_1/pageviews_0/flags_0/percent_0/"
+           alt="Flag Counter">
     </a>
   </div>
 
-  <div class="inat-container">
+  <div class="inat-widget">
     {% raw %}
     <script
       type="text/javascript"
@@ -96,5 +96,6 @@ Interested? Get in touch!
     {% endraw %}
   </div>
 </div>
+
 
 
