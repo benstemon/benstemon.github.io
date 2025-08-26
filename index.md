@@ -85,7 +85,6 @@ Interested? Get in touch!
   </div>
 </div>
 
-<script src="/_scripts/inat-identifications.js"></script>
 
 
 

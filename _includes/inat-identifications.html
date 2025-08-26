@@ -1,12 +1,15 @@
+<script>
 (async function() {
+  const listEl = document.querySelector("#inat-identifications .inat-id-list");
+  if (!listEl || listEl.dataset.filled) return; 
+  listEl.dataset.filled = "true";
+
   const username = "benstemon";
-  const url = `https://api.inaturalist.org/v1/identifications?user_id=${username}&order=desc&order_by=created_at&per_page=5&own_observation=false`;
+  const url = `https://api.inaturalist.org/v1/identifications?user_id=${username}&order=desc&order_by=created_at&per_page=20&own_observation=false`;
 
   try {
     const response = await fetch(url);
     const data = await response.json();
-    const listEl = document.querySelector("#inat-identifications .inat-id-list");
-    if (!listEl) return;
 
     // Deduplicate by observation ID
     const uniqueObs = new Map();
@@ -16,7 +19,6 @@
       }
     });
 
-    // Take first 5 unique identifications
     Array.from(uniqueObs.values()).slice(0,5).forEach(id => {
       const photoUrl = id.observation.photos[0]?.url?.replace('square','medium') || '';
       const scientificName = id.observation.taxon?.name || id.observation.species_guess;
@@ -34,3 +36,4 @@
     console.error("Failed to load identifications:", err);
   }
 })();
+</script>
