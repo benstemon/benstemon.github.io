@@ -1,20 +1,24 @@
-/* --- iNaturalist widget placement --- */
-.inat-container {
+/* --- Container holding iNaturalist + FlagCounter --- */
+.inat-flag-container {
+  display: flex;
+  flex-direction: column; /* stack vertically by default */
   float: right;
   margin-left: 24px;
   margin-bottom: 20px;
   max-width: 360px;
+  gap: 16px; /* spacing between widgets */
 }
 
 @media (max-width: 768px) {
-  .inat-container {
+  .inat-flag-container {
     float: none;
     margin: 16px 0;
     max-width: 100%;
+    flex-direction: column; /* stacked on mobile */
   }
 }
 
-/* --- Clean look & inherit site fonts/colors --- */
+/* --- iNaturalist widget placement --- */
 .inat-widget,
 .inat-widget a,
 .inat-label,
@@ -52,4 +56,15 @@
 .inat-widget td {
   vertical-align: top;
   padding: 6px 0 !important;
+}
+
+/* --- FlagCounter styling --- */
+.flagcounter {
+  text-align: center;
+}
+
+.flagcounter img {
+  max-width: 100%;
+  height: auto;
+  border: none;
 }
