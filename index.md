@@ -142,5 +142,9 @@ Interested? Get in touch!
 {% endraw %}
 </div>
 
+<<<<<<< HEAD
+<div style="clear: both;"></div>
+>>>>>>> parent of 48fd919 (More widget tinkering)
+=======
 <div style="clear: both;"></div>
 >>>>>>> parent of 48fd919 (More widget tinkering)
