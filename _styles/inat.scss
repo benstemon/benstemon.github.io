@@ -1,9 +1,9 @@
 /* --- Container holding iNaturalist + FlagCounter --- */
 .inat-flag-container {
   display: flex;
-  justify-content: flex-end; /* push widgets toward right side */
-  align-items: flex-start;
-  gap: 24px; /* space between flag counter and iNat widget */
+  flex-direction: row;       /* side by side */
+  align-items: flex-start;   /* align tops */
+  gap: 24px;                 /* space between flag counter and iNat */
   margin-bottom: 20px;
 }
 
@@ -58,8 +58,8 @@
 
 /* --- FlagCounter styling --- */
 .flagcounter {
-  text-align: center;
-  max-width: 200px; /* keeps flag counter from growing too wide */
+  flex: 0 0 auto;        /* don’t let it stretch or shrink */
+  max-width: 200px;      /* keeps flag counter narrow */
 }
 
 .flagcounter img {

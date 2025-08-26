@@ -76,7 +76,7 @@ Interested? Get in touch!
     <script
       type="text/javascript"
       charset="utf-8"
-      src="https://www.inaturalist.org/observations/benstemon.widget?layout=large&limit=3&order=desc&order_by=observed_on">
+      src="https://www.inaturalist.org/observations/benstemon.widget?layout=large&limit=5&order=desc&order_by=observed_on">
     </script>
 
     <table class="inat-footer">
