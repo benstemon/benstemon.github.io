@@ -1,35 +1,20 @@
-/* --- Row container: FlagCounter (left) + iNat (right) --- */
-.inat-flag-container {
-  display: flex;
-  flex-direction: row;      /* side by side */
-  align-items: flex-start;  /* align tops */
-  gap: 24px;                /* space between them */
-  margin: 20px 0;
+/* --- iNaturalist widget placement --- */
+.inat-container {
+  float: right;
+  margin-left: 24px;
+  margin-bottom: 20px;
+  max-width: 360px;
 }
 
-/* Mobile: stack vertically */
 @media (max-width: 768px) {
-  .inat-flag-container {
-    flex-direction: column;
-    align-items: flex-start;
+  .inat-container {
+    float: none;
     margin: 16px 0;
-    gap: 16px;
+    max-width: 100%;
   }
 }
 
-/* --- FlagCounter block --- */
-.flagcounter {
-  flex: 0 0 200px;          /* fixed-ish narrow column on the left */
-  max-width: 220px;
-}
-.flagcounter img {
-  max-width: 100%;
-  height: auto;
-  border: none;
-  display: block;
-}
-
-/* --- iNaturalist widget block --- */
+/* --- Clean look & inherit site fonts/colors --- */
 .inat-widget,
 .inat-widget a,
 .inat-label,
@@ -38,7 +23,7 @@
   font-family: inherit !important;
 }
 
-/* Hide the iNaturalist header/logo block (if injected) */
+/* Hide the iNaturalist header/logo block */
 .inat-widget-header {
   display: none !important;
 }

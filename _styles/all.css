@@ -7,4 +7,60 @@
   text-size-adjust: none;
 }
 
+/* --- iNaturalist widget placement --- */
+.inat-container {
+  float: right;
+  margin-left: 24px;
+  margin-bottom: 20px;
+  max-width: 360px;
+}
+
+@media (max-width: 768px) {
+  .inat-container {
+    float: none;
+    margin: 16px 0;
+    max-width: 100%;
+  }
+}
+/* --- Clean look & inherit site fonts/colors --- */
+.inat-widget,
+.inat-widget a,
+.inat-label,
+.inat-value,
+.inat-user {
+  font-family: inherit !important;
+}
+
+/* Hide the iNaturalist header/logo block */
+.inat-widget-header {
+  display: none !important;
+}
+
+/* Remove borders/boxes the script adds */
+.inat-widget table {
+  border-collapse: collapse !important;
+  width: 100%;
+}
+
+.inat-widget tr,
+.inat-widget td {
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* Image niceties */
+.inat-observation-image img,
+.inat-user-image img {
+  max-width: 48px !important;
+  border-radius: 6px;
+  vertical-align: middle;
+}
+
+/* Spacing between rows */
+.inat-widget td {
+  vertical-align: top;
+  padding: 6px 0 !important;
+}
+
 /*# sourceMappingURL=all.css.map */
