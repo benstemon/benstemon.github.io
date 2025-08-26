@@ -44,7 +44,7 @@
 .inat-observation-image img,
 .inat-user-image img {
   max-width: 48px !important;
-  border-radius: 6px;
+  border-radius: 6px !important;
   vertical-align: middle;
 }
 
@@ -54,33 +54,41 @@
   padding: 6px 0 !important;
 }
 
+/* --- Layout positions --- */
 #inat-identifications {
   float: left;
   margin-right: 24px;
 }
 
-.inat-container:nth-of-type(2) {
+#inat-observations {
   float: right;
+  margin-left: 24px;
 }
 
-/* --- Style the dynamic identifications list --- */
-#inat-identifications .inat-id-list {
+/* --- Style the dynamic lists --- */
+#inat-identifications .inat-id-list,
+#inat-observations .inat-id-list {
   list-style: none;
   margin: 8px 0;
   padding: 0;
 }
 
-#inat-identifications .inat-id-list li {
+#inat-identifications .inat-id-list li,
+#inat-observations .inat-id-list li {
   margin-bottom: 6px;
 }
 
-#inat-identifications .inat-observation-link {
+/* --- Link + image flex layout --- */
+#inat-identifications .inat-observation-link,
+#inat-observations .inat-observation-link {
   display: flex;
   align-items: center;
   text-decoration: none;
 }
 
-#inat-identifications .inat-observation-image {
+/* --- Image sizing --- */
+#inat-identifications .inat-observation-image,
+#inat-observations .inat-observation-image {
   width: 48px;
   height: 48px;
   border-radius: 6px;
@@ -88,7 +96,15 @@
   object-fit: cover;
 }
 
-#inat-identifications .inat-observation-name {
+/* --- Text styling --- */
+#inat-identifications .inat-observation-name,
+#inat-observations .inat-observation-name {
   font-family: inherit;
   color: inherit;
+}
+
+#inat-identifications .inat-observation-date,
+#inat-observations .inat-observation-date {
+  font-size: 0.85em;
+  color: #555;
 }

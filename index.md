@@ -77,30 +77,11 @@ Interested? Get in touch!
 [//]: # (iNat observations)
 
 <div class="inat-container">
-{% raw %}
-<div class="inat-widget">
-  <script
-    type="text/javascript"
-    charset="utf-8"
-    src="https://www.inaturalist.org/observations/benstemon.widget?layout=large&limit=5&order=desc&order_by=observed_on">
-  </script>
+  <div class="inat-widget" id="inat-observations">
+    <strong>Recent Observations</strong>
+    <ul class="inat-id-list"></ul>
+  </div>
+</div>
 
-  <table class="inat-footer">
-    <tr class="inat-user">
-      <td class="inat-user-image">
-        <a href="https://www.inaturalist.org/observations/benstemon">
-          <img class="usericon" src="https://static.inaturalist.org/attachments/users/icons/924957/thumb.jpg?1662995748" />
-        </a>
-      </td>
-      <td class="inat-value">
-        <strong>
-          <a href="https://www.inaturalist.org/observations/benstemon">View benstemon’s observations »</a>
-        </strong>
-      </td>
-    </tr>
-  </table>
-</div>
-{% endraw %}
-</div>
 
 <div style="clear: both;"></div>
