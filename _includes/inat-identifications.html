@@ -22,12 +22,16 @@
     Array.from(uniqueObs.values()).slice(0,5).forEach(id => {
       const photoUrl = id.observation.photos[0]?.url?.replace('square','medium') || '';
       const scientificName = id.observation.taxon?.name || id.observation.species_guess;
+      const date = new Date(id.created_at).toLocaleDateString(); // format as MM/DD/YYYY
 
       const li = document.createElement("li");
       li.innerHTML = `
         <a href="https://www.inaturalist.org/observations/${id.observation.id}" class="inat-observation-link">
           ${photoUrl ? `<img src="${photoUrl}" alt="${scientificName}" class="inat-observation-image">` : ''}
-          <span class="inat-observation-name">${scientificName}</span>
+          <div class="inat-observation-text">
+            <span class="inat-observation-name">${scientificName}</span><br>
+            <span class="inat-observation-date">${date}</span>
+          </div>
         </a>
       `;
       listEl.appendChild(li);
