@@ -882,6 +882,42 @@
 
     <script>
 (async function() {
+  const listEl = document.querySelector("#inat-observations .inat-id-list");
+  if (!listEl || listEl.dataset.filled) return; 
+  listEl.dataset.filled = "true";
+
+  const username = "benstemon";
+  const url = `https://api.inaturalist.org/v1/observations?user_id=${username}&order=desc&order_by=observed_on&per_page=20`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    data.results.slice(0,5).forEach(obs => {
+      const photoUrl = obs.photos[0]?.url?.replace('square','medium') || '';
+      const scientificName = obs.taxon?.name || obs.species_guess;
+      const date = new Date(obs.observed_on).toLocaleDateString();
+
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <a href="https://www.inaturalist.org/observations/${obs.id}" class="inat-observation-link">
+          ${photoUrl ? `<img src="${photoUrl}" alt="${scientificName}" class="inat-observation-image">` : ''}
+          <div class="inat-observation-text">
+            <span class="inat-observation-name">${scientificName}</span><br>
+            <span class="inat-observation-date">${date}</span>
+          </div>
+        </a>
+      `;
+      listEl.appendChild(li);
+    });
+  } catch (err) {
+    console.error("Failed to load observations:", err);
+  }
+})();
+</script>
+
+    <script>
+(async function() {
   const listEl = document.querySelector("#inat-identifications .inat-id-list");
   if (!listEl || listEl.dataset.filled) return; 
   listEl.dataset.filled = "true";
@@ -924,5 +960,6 @@
 })();
 </script>
 
+    
   </body>
 </html>

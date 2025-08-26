@@ -700,23 +700,10 @@ Interested? Get in touch!</p>
 </div>
 
 <div class="inat-container">
-
-<div class="inat-widget">
-  <script type="text/javascript" charset="utf-8" src="https://www.inaturalist.org/observations/benstemon.widget?layout=large&limit=5&order=desc&order_by=observed_on">
-  </script>
-
-  <table class="inat-footer">
-    <tr class="inat-user">
-      <td class="inat-user-image"><a href="https://www.inaturalist.org/observations/benstemon">
-<img class="usericon" src="https://static.inaturalist.org/attachments/users/icons/924957/thumb.jpg?1662995748">
-</a></td>
-      <td class="inat-value"><strong>
-<a href="https://www.inaturalist.org/observations/benstemon">View benstemon’s observations »</a>
-</strong></td>
-    </tr>
-  </table>
-</div>
-
+  <div class="inat-widget" id="inat-observations">
+    <strong>Recent Observations</strong>
+    <ul class="inat-id-list"></ul>
+  </div>
 </div>
 
 <div style="clear: both;"></div>
@@ -812,6 +799,42 @@ Interested? Get in touch!</p>
 
     <script>
 (async function() {
+  const listEl = document.querySelector("#inat-observations .inat-id-list");
+  if (!listEl || listEl.dataset.filled) return; 
+  listEl.dataset.filled = "true";
+
+  const username = "benstemon";
+  const url = `https://api.inaturalist.org/v1/observations?user_id=${username}&order=desc&order_by=observed_on&per_page=20`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    data.results.slice(0,5).forEach(obs => {
+      const photoUrl = obs.photos[0]?.url?.replace('square','medium') || '';
+      const scientificName = obs.taxon?.name || obs.species_guess;
+      const date = new Date(obs.observed_on).toLocaleDateString();
+
+      const li = document.createElement("li");
+      li.innerHTML = `
+        <a href="https://www.inaturalist.org/observations/${obs.id}" class="inat-observation-link">
+          ${photoUrl ? `<img src="${photoUrl}" alt="${scientificName}" class="inat-observation-image">` : ''}
+          <div class="inat-observation-text">
+            <span class="inat-observation-name">${scientificName}</span><br>
+            <span class="inat-observation-date">${date}</span>
+          </div>
+        </a>
+      `;
+      listEl.appendChild(li);
+    });
+  } catch (err) {
+    console.error("Failed to load observations:", err);
+  }
+})();
+</script>
+
+    <script>
+(async function() {
   const listEl = document.querySelector("#inat-identifications .inat-id-list");
   if (!listEl || listEl.dataset.filled) return; 
   listEl.dataset.filled = "true";
@@ -854,5 +877,6 @@ Interested? Get in touch!</p>
 })();
 </script>
 
+    
   </body>
 </html>
