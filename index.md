@@ -61,9 +61,35 @@ Interested? Get in touch!
 %}
 
 
-[//]: # (iNat Widget)
+[//]: # (iNat identifications)
 
-## Recent iNaturalist Observations
+<div class="inat-container">
+  <div class="inat-widget" id="inat-identifications">
+    <strong>Recent Identifications</strong>
+    <ul class="inat-id-list"></ul>
+
+    <table class="inat-footer">
+      <tr class="inat-user">
+        <td class="inat-user-image">
+          <a href="https://www.inaturalist.org/identifications/benstemon">
+            <img class="usericon" src="https://static.inaturalist.org/attachments/users/icons/924957/thumb.jpg?1662995748" />
+          </a>
+        </td>
+        <td class="inat-value">
+          <strong>
+            <a href="https://www.inaturalist.org/identifications/benstemon">View benstemon’s identifications »</a>
+          </strong>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<script src="/_scripts/inat-identifications.js"></script>
+
+
+
+[//]: # (iNat observations)
 
 <div class="inat-container">
 {% raw %}
