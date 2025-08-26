@@ -63,4 +63,13 @@
   padding: 6px 0 !important;
 }
 
+#inat-identifications {
+  float: left;
+  margin-right: 24px;
+}
+
+.inat-container:nth-of-type(2) {
+  float: right;
+}
+
 /*# sourceMappingURL=all.css.map */
