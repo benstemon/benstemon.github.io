@@ -69,9 +69,7 @@ Interested? Get in touch!
     <ul class="inat-id-list"></ul>
   </div>
 </div>
-
-
-
+{% include inat-identifications.html %}
 
 
 [//]: # (iNat observations)
@@ -82,6 +80,7 @@ Interested? Get in touch!
     <ul class="inat-id-list"></ul>
   </div>
 </div>
+{% include inat-observations.html %}
 
 
 <div style="clear: both;"></div>
