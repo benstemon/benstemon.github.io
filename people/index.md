@@ -20,3 +20,17 @@ nav:
 
 </div>
 
+
+## Sara Wuerstl
+{:.left}
+
+
+<div class="research-content">
+
+  <p>
+  I completed my B.S. in Biology from Maryville University in St. Louis, Missouri in 2025. During this time, I was a member of Kyra Krakos’ lab with Missouri Botanical Garden where I did work on <i>Nymphaea odorata</i> and <i>Iris virginica</i>. From 2022-2025, I was a member of the team on the USDA urban orchard project with Maryville University, Webster University, University of Missouri St. Louis, Saint Louis University, and the St. Louis Zoo. Most of my research has focused on pollination studies and overall reproductive success of plant species. My PhD work will focus on the ecological, evolutionary, and genetic aspects of nectar production in <i>Physostegia</i> species. 
+  </p>
+
+  {% include figure.html image="images/people/sara.jpg" width="350px" class="figure-right" %}
+
+</div>
