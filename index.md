@@ -16,7 +16,7 @@ We use genomic, phenotypic, and ecological data to answer questions about adapta
 {%
   include button.html
   link="research"
-  text="Find out more"
+  text="Research page"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -43,8 +43,8 @@ Interested? Get in touch!
 
 {%
   include button.html
-  link="team"
-  text="Meet our team"
+  link="people"
+  text="Stone Lab members"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
