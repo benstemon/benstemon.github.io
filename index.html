@@ -18,6 +18,9 @@
       <li><a href="publications.html">Publications</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -175,9 +178,6 @@
 <script>
   const gallery = document.querySelector('.gallery');
 
-  // Duplicate the gallery items once, so scrolling through the clone set
-  // looks identical to the original — lets us reset scrollLeft invisibly
-  // instead of jump-cutting back to the start.
   const originalItems = Array.from(gallery.children);
   originalItems.forEach(item => {
     const clone = item.cloneNode(true);
@@ -192,8 +192,6 @@
     gallery.classList.add('auto-scrolling');
     scrollTimer = setInterval(() => {
       gallery.scrollLeft += 2;
-      // once we've scrolled exactly one full set, snap back by that same
-      // amount — since set two is identical to set one, this is invisible
       if (gallery.scrollLeft >= loopPoint) {
         gallery.scrollLeft -= loopPoint;
       }
@@ -205,6 +203,7 @@
     gallery.classList.remove('auto-scrolling');
   });
 </script>
+<script src="nav.js"></script>
 
 </body>
 </html>

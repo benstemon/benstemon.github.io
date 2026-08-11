@@ -72,6 +72,24 @@ nav .wrap{
 .navlinks a:hover, .navlinks a.active{opacity:1;}
 .navlinks a.active{color:var(--coral); opacity:1;}
 
+/* Mobile menu toggle button — hidden on desktop */
+.nav-toggle{
+  display:none;
+  background:none;
+  border:none;
+  cursor:pointer;
+  padding:8px;
+  flex-direction:column;
+  gap:5px;
+}
+.nav-toggle span{
+  width:24px;
+  height:2px;
+  background:var(--ink);
+  display:block;
+  border-radius:1px;
+}
+
 /* ---------- HERO (homepage) ---------- */
 .hero{
   background:radial-gradient(120% 140% at 15% -10%, var(--plum) 0%, var(--plum-deep) 55%, #221022 100%);
@@ -412,7 +430,28 @@ footer a:hover{color:var(--coral);}
   .research-col{border-right:none; padding:28px 0 !important; border-bottom:1px solid var(--line);}
   .research-entry{grid-template-columns:1fr; gap:10px;}
   .gallery{grid-template-columns:repeat(3,1fr);}
-  .navlinks{display:none;}
+
+  .nav-toggle{display:flex;}
+  .navlinks{
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+    background:var(--paper);
+    flex-direction:column;
+    gap:0;
+    border-bottom:1px solid var(--line);
+    padding:8px 24px 16px;
+  }
+  .navlinks.open{display:flex;}
+  .navlinks a{
+    padding:12px 0;
+    border-bottom:1px solid var(--line);
+    display:block;
+  }
+  .navlinks li:last-child a{border-bottom:none;}
+
   section{padding:56px 0;}
   .wrap{padding:0 24px;}
   .contact-grid{grid-template-columns:1fr; gap:36px;}

@@ -18,6 +18,9 @@
       <li><a href="publications.html" class="active">Publications</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -77,7 +80,6 @@
   fetch('pubs.json')
     .then(res => res.json())
     .then(pubs => {
-      // newest first
       pubs.sort((a, b) => b.year - a.year);
 
       pubList.innerHTML = pubs.map(pub => {
@@ -119,6 +121,7 @@
     });
   }
 </script>
+<script src="nav.js"></script>
 
 </body>
 </html>
