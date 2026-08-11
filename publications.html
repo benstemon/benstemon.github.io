@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Publications — The Stone Lab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="index.html">The <span>Stone Lab</span> at Mississippi State</a>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="people.html">People</a></li>
+      <li><a href="publications.html" class="active">Publications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-hero">
+  <div class="wrap">
+    <span class="eyebrow mono">Recent work</span>
+    <h1>Publications</h1>
+    <p class="lede">Select preprints and peer-reviewed papers from the lab.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+
+    <div class="pub-filter">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="peer-reviewed">Peer-reviewed</button>
+      <button data-filter="preprint">Preprints</button>
+    </div>
+
+    <ul class="pub-list" id="pub-list">
+      <li><p class="mono" style="opacity:0.5;">Loading publications…</p></li>
+    </ul>
+
+<!-- Notes on how to add new publications:
+    <p style="margin-top:40px; font-size:14.5px; color:rgba(32,27,24,0.6);">
+      To add a new publication: open <code>pubs.json</code> and add a new entry following the same
+      pattern — <code>year</code>, <code>title</code>, <code>meta</code> (authors/journal — wrap lab
+      members' names in <code>&lt;strong&gt;</code> to bold them), <code>type</code> (<code>"peer-reviewed"</code>
+      or <code>"preprint"</code>, for the filter buttons), and optional <code>doi</code> / <code>pdf</code>
+      URLs. No HTML editing needed for new papers — just the data file.
+    </p>
+-->
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h3>The Stone Lab</h3>
+      <p style="max-width:38ch; color:rgba(247,245,238,0.65); font-size:14.5px;">Department of Biological Sciences<br>Mississippi State University</p>
+    </div>
+    <ul class="foot-links">
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://orcid.org/0000-0002-7955-1264">ORCID</a></li>
+      <li><a href="https://scholar.google.com/citations?user=RPcw-fQAAAAJ">Google Scholar</a></li>
+      <li><a href="https://www.inaturalist.org/people/benstemon">iNaturalist</a></li>
+    </ul>
+  </div>
+  <div class="wrap copyright">© 2026 The Stone Lab at Mississippi State</div>
+</footer>
+
+<script>
+  const pubList = document.getElementById('pub-list');
+
+  fetch('pubs.json')
+    .then(res => res.json())
+    .then(pubs => {
+      // newest first
+      pubs.sort((a, b) => b.year - a.year);
+
+      pubList.innerHTML = pubs.map(pub => {
+        const links = [
+          pub.doi ? `<a href="${pub.doi}">DOI</a>` : '',
+          pub.pdf ? `<a href="${pub.pdf}">PDF</a>` : ''
+        ].filter(Boolean).join('');
+
+        return `
+          <li data-type="${pub.type}">
+            <span class="pub-year mono">${pub.year}</span>
+            <div>
+              <div class="pub-title">${pub.title}</div>
+              <div class="pub-meta">${pub.meta}</div>
+              ${links ? `<div class="pub-links">${links}</div>` : ''}
+            </div>
+          </li>`;
+      }).join('');
+
+      wireFilters();
+    })
+    .catch(err => {
+      pubList.innerHTML = '<li><p class="mono" style="opacity:0.5;">Could not load publications.json — check the file exists and this page is being served over http(s), not opened directly as a file.</p></li>';
+      console.error(err);
+    });
+
+  function wireFilters() {
+    const buttons = document.querySelectorAll('.pub-filter button');
+    const items = document.querySelectorAll('#pub-list li');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        items.forEach(li => {
+          li.style.display = (filter === 'all' || li.dataset.type === filter) ? '' : 'none';
+        });
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
