@@ -137,22 +137,13 @@
   <div class="wrap">
     <div class="section-head">
       <div>
-        <span class="tag">03 — Recent iNaturalist Activity</span>
-        <h2>Observations and Identifications</h2>
+        <span class="tag">03 — On iNaturalist</span>
+        <h2>Recent Identifications</h2>
       </div>
+      <a href="https://www.inaturalist.org/people/benstemon" class="mono" style="font-size:13px; text-decoration:none; color:var(--sage);">Full profile →</a>
     </div>
-    <!--
-      PLACEHOLDER: iNaturalist observations/identifications feed.
-      Plan: pull recent observations + identifications via the iNaturalist API
-      (https://api.inaturalist.org/v1/docs/) for user "benstemon", render as a
-      small photo grid with species name, date, and location. Can be a static
-      build-time fetch (simplest) or a small client-side JS widget (more current
-      but adds an external network call on page load). Revisit once the rest of
-      the site is live.
-    -->
-    <div class="feature-placeholder">
-      <span class="mono">Coming soon</span>
-      Live iNaturalist observations and identifications will appear here.
+    <div id="inat-feed">
+      <div class="feature-placeholder"><span class="mono">Loading…</span></div>
     </div>
   </div>
 </section>
@@ -203,6 +194,7 @@
     gallery.classList.remove('auto-scrolling');
   });
 </script>
+<script src="inat.js"></script>
 <script src="nav.js"></script>
 
 </body>

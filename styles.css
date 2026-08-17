@@ -153,17 +153,17 @@ nav .wrap{
 .hero-art svg{width:100%; max-width:320px; height:auto;}
 .hero-art img{
   width:100%;
-  max-width:340px;
-  aspect-ratio:8/9;
+  max-width:480px;
+  aspect-ratio:1/1;
   object-fit:cover;
-  border-radius:2px;
+  border-radius:50%;
   display:block;
 }
 .hero-art .mono{margin-top:12px; font-size:13px;}
 .hero-photo-placeholder{
-  width:100%; max-width:320px; aspect-ratio:8/9;
+  width:100%; max-width:480px; aspect-ratio:1/1;
   border:1px dashed rgba(247,245,238,0.35);
-  border-radius:4px;
+  border-radius:50%;
   display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px;
   color:rgba(247,245,238,0.55);
   text-align:center;
@@ -346,6 +346,32 @@ section{padding:86px 0;}
   font-size:14.5px;
 }
 .feature-placeholder .mono{display:block; margin-bottom:8px; color:var(--sage);}
+
+/* ---------- iNATURALIST FEED ---------- */
+.inat-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(170px, 1fr));
+  gap:22px;
+}
+.inat-card{
+  display:block;
+  text-decoration:none;
+  color:inherit;
+  transition:opacity 0.2s;
+}
+.inat-card:hover{opacity:0.78;}
+.inat-photo{
+  width:100%;
+  aspect-ratio:1/1;
+  overflow:hidden;
+  border-radius:4px;
+  background:linear-gradient(135deg, var(--sage), var(--plum));
+}
+.inat-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+.inat-meta{margin-top:10px;}
+.inat-species{font-size:14.5px; line-height:1.35; color:var(--ink);}
+.inat-common{font-style:normal; color:rgba(32,27,24,0.6); font-size:13px;}
+.inat-date{font-size:11.5px; color:var(--sage); margin-top:4px; letter-spacing:0.04em;}
 
 /* ---------- PEOPLE (homepage strip) ---------- */
 .people-strip{display:flex; gap:28px; overflow-x:auto; padding-bottom:8px;}
