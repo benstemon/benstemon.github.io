@@ -7,10 +7,14 @@ const ENDPOINT  = 'https://script.google.com/macros/s/AKfycbxejFlRf58Ih80DKgX_0U
 
 /* ------------------------------------------------------------------ */
 
-const IMAGE_DIR = '/penstemon_color_images/images/';
+const IMAGE_DIR    = 'images/';
 const DETAIL_MAX   = 900;   // px, longest side of the clickable canvas
 const OVERVIEW_MAX = 240;   // px, longest side of the small navigation image
-const CLIP_AT      = 250;   // any channel at or above this counts as clipped
+
+// Glare is a reflection of the light source, so it is near-white: ALL channels high.
+// Testing a single channel would flag every saturated pink petal, which is not glare.
+const GLARE_AT = 225;   // lowest channel at or above this counts as glare
+const CLIP_AT  = 255;   // a channel pinned at the maximum; the true colour was out of range
 
 const STORE_PREFIX = 'stonelab_color_v1_';
 
@@ -232,27 +236,36 @@ $('detail').addEventListener('click', (e) => {
   if (px < 0 || py < 0 || px >= img.naturalWidth || py >= img.naturalHeight) return;
 
   const d = fullCtx.getImageData(px, py, 1, 1).data;
+  const glare   = Math.min(d[0], d[1], d[2]) >= GLARE_AT;
   const clipped = (d[0] >= CLIP_AT || d[1] >= CLIP_AT || d[2] >= CLIP_AT);
-  clicks.push({ x: px, y: py, r: d[0], g: d[1], b: d[2], clipped: clipped });
+  clicks.push({ x: px, y: py, r: d[0], g: d[1], b: d[2], glare: glare, clipped: clipped });
   renderSwatches();
   updateSaveButton();
 });
 
 function renderSwatches() {
   const wrap = $('swatches');
-  wrap.innerHTML = clicks.map((p) =>
-    '<span class="sw' + (p.clipped ? ' clipped' : '') +
-    '" style="background:rgb(' + p.r + ',' + p.g + ',' + p.b + ')" title="' +
-    p.r + ', ' + p.g + ', ' + p.b + '"></span>'
-  ).join('');
+  wrap.innerHTML = clicks.map((p) => {
+    const cls = p.glare ? ' glare' : (p.clipped ? ' clipped' : '');
+    return '<span class="sw' + cls + '" style="background:rgb(' + p.r + ',' + p.g + ',' + p.b +
+           ')" title="' + p.r + ', ' + p.g + ', ' + p.b + '"></span>';
+  }).join('');
   $('clickcount').textContent = clicks.length + (clicks.length === 1 ? ' pixel' : ' pixels');
 
-  const nClipped = clicks.filter((p) => p.clipped).length;
-  $('clipwarn').innerHTML = nClipped
-    ? '<div class="warn">' + nClipped + ' sampled ' + (nClipped === 1 ? 'pixel is' : 'pixels are') +
-      ' at the top of the brightness range, outlined in pink above. That usually means glare rather than ' +
-      'petal color. Undo those and sample a spot without a shine on it.</div>'
-    : '';
+  const nGlare = clicks.filter((p) => p.glare).length;
+  const nClip  = clicks.filter((p) => p.clipped && !p.glare).length;
+  let msg = '';
+  if (nGlare) {
+    msg += '<div class="warn">' + nGlare + ' sampled ' + (nGlare === 1 ? 'pixel is' : 'pixels are') +
+           ' almost white, outlined in pink above. That is glare rather than petal colour. ' +
+           'Undo those and sample somewhere without a shine on it.</div>';
+  }
+  if (nClip) {
+    msg += '<div class="note">' + nClip + ' ' + (nClip === 1 ? 'pixel is' : 'pixels are') +
+           ' at the very top of one colour channel. The flower may be more saturated than the ' +
+           'camera could record. Nothing to fix, and worth noting if most of this flower looks that way.</div>';
+  }
+  $('clipwarn').innerHTML = msg;
 }
 
 $('undo').addEventListener('click', () => {

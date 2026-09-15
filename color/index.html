@@ -96,12 +96,17 @@
 
   .swatches{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:12px; min-height:26px;}
   .sw{width:26px; height:26px; border:1px solid rgba(32,27,24,0.25);}
-  .sw.clipped{outline:2px solid var(--coral); outline-offset:-2px;}
+  .sw.glare{outline:2px solid var(--coral); outline-offset:-2px;}
+  .sw.clipped{outline:2px dotted var(--sage); outline-offset:-2px;}
   .clickcount{font-family:'Space Mono', monospace; font-size:13px; color:var(--sage);}
 
   .warn{
     font-size:13px; color:var(--plum); background:#f6e9ee;
     border-left:3px solid var(--coral); padding:9px 12px; margin-top:10px;
+  }
+  .note{
+    font-size:12.5px; color:rgba(32,27,24,0.7); background:var(--paper-warm);
+    border-left:3px solid var(--sage); padding:9px 12px; margin-top:10px;
   }
 
   .actions{display:flex; flex-direction:column; gap:9px;}
