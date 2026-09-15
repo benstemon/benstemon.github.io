@@ -1,0 +1,23 @@
+[
+  {
+    "file": "testcard.jpg",
+    "obsID": "testcard-1",
+    "species": "COLOR TEST CARD (pass 1)",
+    "creator": "generated",
+    "license": "n/a"
+  },
+  {
+    "file": "testcard.jpg",
+    "obsID": "testcard-2",
+    "species": "COLOR TEST CARD (pass 2)",
+    "creator": "generated",
+    "license": "n/a"
+  },
+  {
+    "file": "testcard.jpg",
+    "obsID": "testcard-3",
+    "species": "COLOR TEST CARD (pass 3)",
+    "creator": "generated",
+    "license": "n/a"
+  }
+]

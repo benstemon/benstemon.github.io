@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Flower Color Scoring — The Stone Lab</title>
+<link rel="stylesheet" href="../styles.css?v=2">
+<style>
+  /* ---------- tool-specific layout ---------- */
+  body.tool { background:var(--paper); }
+
+  .toolbar{
+    position:sticky; top:0; z-index:40;
+    background:rgba(238,240,231,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .toolbar .wrap{
+    display:flex; align-items:center; gap:24px; flex-wrap:wrap;
+    padding-top:14px; padding-bottom:14px;
+  }
+  .toolbar .brand{font-size:17px;}
+  .toolbar .spacer{flex:1;}
+  .scorer-tag{
+    font-family:'Space Mono', monospace; font-size:13px;
+    color:var(--plum); background:var(--paper-warm);
+    border:1px solid var(--line); padding:5px 12px;
+  }
+  .progress-tag{font-family:'Space Mono', monospace; font-size:13px; color:var(--sage);}
+
+  /* ---------- gate ---------- */
+  .gate{
+    position:fixed; inset:0; z-index:100;
+    background:radial-gradient(120% 140% at 15% -10%, var(--plum) 0%, var(--plum-deep) 55%, #221022 100%);
+    color:var(--paper-warm);
+    display:flex; align-items:center; justify-content:center; padding:24px;
+  }
+  .gate-card{width:100%; max-width:380px;}
+  .gate-card h1{font-size:30px; color:#fff; margin-bottom:10px;}
+  .gate-card p{font-size:15px; color:rgba(247,245,238,0.78); margin:0 0 26px;}
+  .gate-card label{
+    display:block; font-family:'Space Mono', monospace; font-size:12px;
+    color:var(--coral); margin-bottom:7px; letter-spacing:0.06em;
+  }
+  .gate-card input, .gate-card select{
+    width:100%; padding:11px 13px; font-size:15px; font-family:inherit;
+    background:rgba(247,245,238,0.08); color:#fff;
+    border:1px solid rgba(247,245,238,0.3); border-radius:2px; margin-bottom:18px;
+  }
+  .gate-card select option{color:var(--ink);}
+  .gate-card input:focus, .gate-card select:focus{outline:2px solid var(--coral); outline-offset:1px;}
+  .gate-err{color:var(--coral); font-size:14px; min-height:20px; margin-bottom:10px;}
+
+  /* ---------- work area ---------- */
+  .work{display:grid; grid-template-columns: 1fr 300px; gap:34px; padding:34px 0 80px;}
+
+  .detail-wrap{position:relative;}
+  #detail{
+    width:100%; height:auto; display:block; cursor:crosshair;
+    background:var(--ink); border:1px solid var(--line);
+  }
+  #detail:focus-visible{outline:2px solid var(--coral); outline-offset:2px;}
+
+  .imgmeta{
+    display:flex; justify-content:space-between; gap:18px; flex-wrap:wrap;
+    margin-top:9px; font-size:13px; color:rgba(32,27,24,0.62);
+  }
+  .imgmeta .sp{font-style:italic; color:var(--ink); font-size:14.5px;}
+  .imgmeta .credit{font-family:'Space Mono', monospace; font-size:11.5px;}
+
+  .zoomrow{display:flex; align-items:flex-start; gap:18px; margin-top:20px;}
+  #overview{
+    display:block; cursor:crosshair; background:var(--ink);
+    border:1px solid var(--line); max-width:240px; height:auto;
+  }
+  .zoomnote{font-size:13.5px; color:rgba(32,27,24,0.6); max-width:34ch; margin:0;}
+
+  /* ---------- side panel ---------- */
+  .panel > section{padding:0 0 24px; border-bottom:1px solid var(--line); margin-bottom:24px;}
+  .panel > section:last-child{border-bottom:none;}
+  .panel h3{font-size:17px; margin-bottom:12px;}
+  .panel .hint{font-size:13px; color:rgba(32,27,24,0.58); margin:0 0 12px;}
+
+  .choice{display:flex; flex-direction:column; gap:7px;}
+  .choice button{
+    text-align:left; font-family:inherit; font-size:14.5px;
+    padding:9px 13px; background:var(--paper-warm);
+    border:1px solid var(--line); border-radius:2px; cursor:pointer; color:var(--ink);
+  }
+  .choice button:hover{border-color:var(--sage);}
+  .choice button[aria-pressed="true"]{
+    background:var(--plum); color:#fff; border-color:var(--plum);
+  }
+  .choice button:focus-visible{outline:2px solid var(--coral); outline-offset:1px;}
+
+  .swatches{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:12px; min-height:26px;}
+  .sw{width:26px; height:26px; border:1px solid rgba(32,27,24,0.25);}
+  .sw.clipped{outline:2px solid var(--coral); outline-offset:-2px;}
+  .clickcount{font-family:'Space Mono', monospace; font-size:13px; color:var(--sage);}
+
+  .warn{
+    font-size:13px; color:var(--plum); background:#f6e9ee;
+    border-left:3px solid var(--coral); padding:9px 12px; margin-top:10px;
+  }
+
+  .actions{display:flex; flex-direction:column; gap:9px;}
+  .actions .btn{text-align:center; border-radius:2px; cursor:pointer; font-family:inherit;}
+  .btn-go{background:var(--plum); color:#fff; border:1px solid var(--plum); padding:12px 18px; font-size:15px; font-weight:600;}
+  .btn-go:hover{background:var(--plum-deep);}
+  .btn-go[disabled]{opacity:0.4; cursor:not-allowed;}
+  .btn-quiet{background:transparent; color:var(--ink); border:1px solid var(--line); padding:9px 18px; font-size:14px;}
+  .btn-quiet:hover{border-color:var(--sage);}
+
+  .savestate{font-family:'Space Mono', monospace; font-size:11.5px; color:var(--sage); min-height:16px;}
+
+  .done-card{
+    max-width:52ch; padding:30px; background:var(--paper-warm);
+    border-left:3px solid var(--sage);
+  }
+  .done-card h2{font-size:26px; margin-bottom:12px;}
+
+  @media (max-width:900px){
+    .work{grid-template-columns:1fr; gap:26px;}
+    .zoomrow{flex-direction:column;}
+    #overview{max-width:100%;}
+  }
+</style>
+</head>
+<body class="tool">
+
+<!-- password + scorer gate -->
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <h1>Flower color scoring</h1>
+    <p>Stone Lab &middot; <i>Penstemon</i> corolla color</p>
+    <label for="gate-scorer">Who is scoring</label>
+    <select id="gate-scorer">
+      <option value="">Choose your name</option>
+      <option value="Katelyn">Katelyn</option>
+      <option value="Gracie">Gracie</option>
+      <option value="Ben">Ben</option>
+    </select>
+    <label for="gate-pw">Lab password</label>
+    <input type="password" id="gate-pw" autocomplete="off">
+    <div class="gate-err" id="gate-err"></div>
+    <button class="btn btn-solid" id="gate-go" style="width:100%;">Start scoring</button>
+  </div>
+</div>
+
+<div class="toolbar">
+  <div class="wrap">
+    <a class="brand" href="../index.html">The <span>Stone Lab</span></a>
+    <span class="spacer"></span>
+    <span class="progress-tag" id="progress">&nbsp;</span>
+    <span class="scorer-tag" id="scorer-tag">&nbsp;</span>
+  </div>
+</div>
+
+<div class="wrap" id="main" hidden>
+  <div class="work">
+
+    <div>
+      <div class="detail-wrap">
+        <canvas id="detail" tabindex="0"></canvas>
+      </div>
+      <div class="imgmeta">
+        <span class="sp" id="species">&nbsp;</span>
+        <span class="credit" id="credit">&nbsp;</span>
+      </div>
+
+      <div class="zoomrow">
+        <canvas id="overview"></canvas>
+        <div>
+          <p class="zoomnote">Drag a box on the small image to zoom the large one. Click the large image to sample a pixel. Sample the face of the corolla lobes. Avoid the pale throat, the hairs, and any spot with glare on it.</p>
+          <button class="btn btn-quiet" id="reset-zoom" style="margin-top:12px;">Reset zoom</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel">
+
+      <section>
+        <h3>Lighting</h3>
+        <p class="hint">Judge before you sample.</p>
+        <div class="choice" id="light-choice">
+          <button data-val="sun" aria-pressed="false">Full sun</button>
+          <button data-val="partial" aria-pressed="false">Partial sun</button>
+          <button data-val="shade" aria-pressed="false">Shade</button>
+        </div>
+      </section>
+
+      <section>
+        <h3>Sampled pixels</h3>
+        <div class="swatches" id="swatches"></div>
+        <div class="clickcount" id="clickcount">0 pixels</div>
+        <button class="btn btn-quiet" id="undo" style="margin-top:12px;">Undo last pixel</button>
+        <div id="clipwarn"></div>
+      </section>
+
+      <section>
+        <h3>Or reject this image</h3>
+        <p class="hint">Rejecting clears any pixels you sampled.</p>
+        <div class="choice" id="reject-choice">
+          <button data-val="no flower" aria-pressed="false">No flower</button>
+          <button data-val="flower dead or degraded" aria-pressed="false">Flower dead or degraded</button>
+          <button data-val="flower too small in frame" aria-pressed="false">Flower too small in frame</button>
+          <button data-val="flower overexposed" aria-pressed="false">Flower overexposed</button>
+        </div>
+      </section>
+
+      <section>
+        <div class="actions">
+          <button class="btn btn-go" id="save" disabled>Save and next</button>
+          <button class="btn btn-quiet" id="download">Download my data</button>
+          <div class="savestate" id="savestate">&nbsp;</div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+<div class="wrap" id="finished" hidden>
+  <div class="done-card" style="margin:60px 0 90px;">
+    <h2>All images scored</h2>
+    <p>Every image in this batch has a decision recorded. Download your data as a backup, then let Ben know you're through the batch.</p>
+    <button class="btn btn-quiet" id="download2">Download my data</button>
+  </div>
+</div>
+
+<script src="color.js"></script>
+</body>
+</html>
