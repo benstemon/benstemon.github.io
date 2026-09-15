@@ -1,13 +1,13 @@
 /* Flower color scoring tool — Stone Lab
  *
- * EDIT THESE TWO LINES AND NOTHING ELSE:
+ * Settings for this deployment. These are the lines to check if you replace this file.
  */
-const PASSWORD = 'newberryi';
-const ENDPOINT  = 'https://script.google.com/macros/s/AKfycbxejFlRf58Ih80DKgX_0UvU_norR2sh1UMEJvQsbWk9c6qDjJNSpUJ446RZ_eocWSa2Xg/exec';
+const PASSWORD   = 'newberryi';
+const ENDPOINT   = 'https://script.google.com/macros/s/AKfycbxejFlRf58Ih80DKgX_0UvU_norR2sh1UMEJvQsbWk9c6qDjJNSpUJ446RZ_eocWSa2Xg/exec';
+const IMAGE_DIR  = '/penstemon_color_images/images/';   // separate repo, same domain
 
 /* ------------------------------------------------------------------ */
 
-const IMAGE_DIR    = 'images/';
 const DETAIL_MAX   = 900;   // px, longest side of the clickable canvas
 const OVERVIEW_MAX = 240;   // px, longest side of the small navigation image
 
