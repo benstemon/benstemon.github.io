@@ -262,8 +262,8 @@ function renderSwatches() {
   }
   if (nClip) {
     msg += '<div class="note">' + nClip + ' ' + (nClip === 1 ? 'pixel is' : 'pixels are') +
-           ' at the very top of one colour channel. The flower may be more saturated than the ' +
-           'camera could record. Nothing to fix, and worth noting if most of this flower looks that way.</div>';
+           ' at the very top of one colour channel. That happens in bright sun and there is ' +
+           'nothing to fix.</div>';
   }
   $('clipwarn').innerHTML = msg;
 }
