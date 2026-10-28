@@ -32,6 +32,17 @@ if (!dir.exists(dirname(IMAGE_DIR))) {
 }
 dir.create(IMAGE_DIR, showWarnings = FALSE)
 
+# refuse to re-run a batch that is already logged. Earlier observations are excluded
+# below, so a second run would quietly draw a different set under the same number,
+# overwrite the manifest, and append duplicate-numbered rows to the log.
+if (file.exists(META_LOG)) {
+  logged <- unique(read.csv(META_LOG, colClasses = "character")$batch)
+  if (as.character(BATCH) %in% logged) {
+    stop("Batch ", BATCH, " is already in ", META_LOG, " (logged batches: ",
+         paste(logged, collapse = ", "), ").\nBump BATCH at the top of this script.")
+  }
+}
+
 # GBIF text files contain unescaped quotes and apostrophes in place names and
 # people's names. Without quote="" read.delim silently swallows rows.
 # Columns are named explicitly so archives downloaded at different times still stack.
