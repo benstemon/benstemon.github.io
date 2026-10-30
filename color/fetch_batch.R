@@ -6,6 +6,10 @@
 
 library(jsonlite)
 
+# GBIF files are UTF-8. Under Rscript in a plain terminal the locale can be "C", and
+# then read.delim stops at the first accented character and silently returns a few rows.
+invisible(Sys.setlocale("LC_CTYPE", "en_US.UTF-8"))
+
 # Assumed layout on disk, with the two repos as siblings:
 #
 #   ~/repos/benstemon.github.io/color/   <- this script, manifest.json, metadata log
@@ -13,14 +17,14 @@ library(jsonlite)
 #
 # Adjust IMAGE_DIR if your image repo is named or placed differently.
 
-DWCA_DIRS <- c("gbif_newberryi", "gbif_davidsonii")   # one folder per GBIF download;
+DWCA_DIRS <- c("gbif_newberryi")    # one folder per GBIF download;
                                                       # a single folder is fine too
 IMAGE_DIR <- "../../penstemon_color_images/images"    # in the image repo
 MANIFEST  <- "manifest.json"        # stays here; the page reads /color/manifest.json
 META_LOG  <- "batch_metadata.csv"   # stays here; appended, never replaced
-SPECIES   <- c("newberryi", "davidsonii")
-BATCH     <- 1             # bump this by one for each new batch
-N_PER_SP  <- 100           # observations per species per batch
+SPECIES   <- c("newberryi")   # batch 1 was newberryi vs davidsonii; from batch 2, newberryi only
+BATCH     <- 2             # bump this by one for each new batch
+N_PER_SP  <- 200           # observations per species per batch
 SEED      <- 91925         # fixed, so each batch number is reproducible
 PAUSE     <- 0.3           # seconds between downloads
 
@@ -101,6 +105,15 @@ if (file.exists(META_LOG)) {
   cat("excluding", length(used), "observations used in earlier batches\n")
   occ <- occ[!(as.character(occ$gbifID) %in% used), ]
   cat(nrow(occ), "observations still available\n")
+}
+
+# stop before downloading or writing anything if a species cannot fill its quota;
+# a short count usually means the archive was read incompletely
+avail <- table(factor(occ$specificEpithet, levels = SPECIES))
+if (any(avail < N_PER_SP)) {
+  stop("Not enough observations to fill the batch:\n",
+       paste0("  ", names(avail), ": ", avail, " available, ", N_PER_SP, " needed",
+              collapse = "\n"))
 }
 
 # draw the batch
