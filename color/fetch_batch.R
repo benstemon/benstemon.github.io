@@ -23,7 +23,7 @@ IMAGE_DIR <- "../../penstemon_color_images/images"    # in the image repo
 MANIFEST  <- "manifest.json"        # stays here; the page reads /color/manifest.json
 META_LOG  <- "batch_metadata.csv"   # stays here; appended, never replaced
 SPECIES   <- c("newberryi")   # batch 1 was newberryi vs davidsonii; from batch 2, newberryi only
-BATCH     <- 2             # bump this by one for each new batch
+BATCH     <- 3             # bump this by one for each new batch
 N_PER_SP  <- 200           # observations per species per batch
 SEED      <- 91925         # fixed, so each batch number is reproducible
 PAUSE     <- 0.3           # seconds between downloads
